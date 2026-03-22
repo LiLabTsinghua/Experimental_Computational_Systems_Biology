@@ -20,12 +20,12 @@ This lab course explores core computational analyses for systems biology with Sa
 ## 🌱 Start
 
 - **Matlab**
- - [RAVEN]([SysBioChalmers/RAVEN: The RAVEN Toolbox for genome scale model reconstruction, curation and analysis.](https://github.com/SysBioChalmers/RAVEN))
- - [Cobra Toolbox]([opencobra/cobratoolbox: The COnstraint-Based Reconstruction and Analysis Toolbox. Documentation:](https://github.com/opencobra/cobratoolbox))
- - [Human-GEM]([SysBioChalmers/Human-GEM: The generic genome-scale metabolic model of Homo sapiens](https://github.com/SysBioChalmers/Human-GEM))
+   (1) [RAVEN]([SysBioChalmers/RAVEN: The RAVEN Toolbox for genome scale model reconstruction, curation and analysis.](https://github.com/SysBioChalmers/RAVEN))
+   (2) [Cobra Toolbox]([opencobra/cobratoolbox: The COnstraint-Based Reconstruction and Analysis Toolbox. Documentation:](https://github.com/opencobra/cobratoolbox))
+   (3) [Human-GEM]([SysBioChalmers/Human-GEM: The generic genome-scale metabolic model of Homo sapiens](https://github.com/SysBioChalmers/Human-GEM))
 
 - **R**
- - Seurat
+   (1) Seurat
 
 - **Optimization Solver**
-   - Gurobi
+   (1) Gurobi
