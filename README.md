@@ -29,3 +29,7 @@ This lab course explores core computational analyses for systems biology with Sa
 
 - **Optimization Solver**: 
    (1) Gurobi
+
+- **Clone the repository to your server**:
+ ```bash
+  git clone https://github.com/LiLabTsinghua/Experimental_Computational_Systems_Biology.git
