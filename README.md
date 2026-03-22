@@ -1,1 +1,31 @@
-# Experimental_Computational_Systems_Biology
+# 🌟 Experimental Computational Systems Biology
+This repository contains a comprehensive tutorial for **Experimental Computational Systems Biology**. This computational systems biology lab course covers omics data analysis (RNA-seq and single-cell RNA-seq), metabolic network modeling and analysis (S matrix construction, MFA, FBA), enzyme-constrained model simulation, and functional gene annotation, with hands-on tasks to master computational tools and interpret biological data.
+
+## ▶ Table of Contents
+
+- [Introduction](#introduction)
+- [Start](#start)
+- Course Lessons
+  - [Exercise 1: RNA-seq Data Analysis]
+  - [Exercise 2: S-matrix Construction and Analysis]
+  - [Exercise 3: Flux Balance Analysis]
+  - [Exercise 4: ecModels: Enzyme Constrained Modeling]
+  - [Exercise 5: Single-Cell Data Analysis]
+  - [Exercise 6: Human-GEM Analysis]
+
+## 👀 Introduction
+
+This lab course explores core computational analyses for systems biology with Saccharomyces cerevisiae and human PBMC as model systems. It covers RNA-seq data processing (normalization, PCA, differential gene expression) and functional annotation via GO term enrichment, metabolic network analysis including stoichiometric matrix construction, metabolic flux analysis (MFA) and flux balance analysis (FBA), enzyme-constrained model simulation for physiological insights (e.g., Crabtree effect), and single-cell RNA-seq analysis with Seurat (QC, dimensionality reduction, clustering, cell annotation). Through hands-on tasks, students will master key bioinformatic tools and algorithms, learn to interpret omics and metabolic data, and gain the ability to analyze biological systems from a computational perspective, laying a solid foundation for interdisciplinary research in computational systems biology.
+
+## 🌱 Start
+
+- **Matlab**
+ - [RAVEN]([SysBioChalmers/RAVEN: The RAVEN Toolbox for genome scale model reconstruction, curation and analysis.](https://github.com/SysBioChalmers/RAVEN))
+ - [Cobra Toolbox]([opencobra/cobratoolbox: The COnstraint-Based Reconstruction and Analysis Toolbox. Documentation:](https://github.com/opencobra/cobratoolbox))
+ - [Human-GEM]([SysBioChalmers/Human-GEM: The generic genome-scale metabolic model of Homo sapiens](https://github.com/SysBioChalmers/Human-GEM))
+
+- **R**
+ - Seurat
+
+- **Optimization Solver**
+   - Gurobi
