@@ -18,6 +18,7 @@ This repository contains a comprehensive tutorial for **Experimental Computation
 This lab course explores core computational analyses for systems biology with Saccharomyces cerevisiae and human PBMC as model systems. It covers RNA-seq data processing (normalization, PCA, differential gene expression) and functional annotation via GO term enrichment, metabolic network analysis including stoichiometric matrix construction, metabolic flux analysis (MFA) and flux balance analysis (FBA), enzyme-constrained model simulation for physiological insights (e.g., Crabtree effect), and single-cell RNA-seq analysis with Seurat (QC, dimensionality reduction, clustering, cell annotation). Through hands-on tasks, students will master key bioinformatic tools and algorithms, learn to interpret omics and metabolic data, and gain the ability to analyze biological systems from a computational perspective, laying a solid foundation for interdisciplinary research in computational systems biology.
 
 ## 🌱 Start
+- see **"软件安装教程"** for tutorial of software.
 
 - **Matlab**: 
    (1) [RAVEN](https://github.com/SysBioChalmers/RAVEN);
