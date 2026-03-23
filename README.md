@@ -1,5 +1,6 @@
 # 🌟 Experimental Computational Systems Biology
 This repository contains a comprehensive tutorial for **Experimental Computational Systems Biology**. This computational systems biology lab course covers omics data analysis (RNA-seq and single-cell RNA-seq), metabolic network modeling and analysis (S matrix construction, MFA, FBA), enzyme-constrained model simulation, and functional gene annotation, with hands-on tasks to master computational tools and interpret biological data.  
+  
 Most tutorials are compiled from the [Chalmers Sysbio materials](https://github.com/SysBioChalmers/KMG060-Systems-Biology-course), the [RAVEN toolbox](https://github.com/SysBioChalmers/RAVEN), and the [Human-GEM repository](https://github.com/SysBioChalmers/Human-GEM).
 
 ## ▶ Table of Contents
