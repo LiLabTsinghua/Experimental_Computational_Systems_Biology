@@ -35,8 +35,13 @@ plot1 + plot2
 #filter bad cells
 pbmc <- subset(pbmc, subset = nFeature_RNA > 200 & nFeature_RNA < 2500 & percent.mt < 5)
 
+# Q1: What does the nFeature_RNA metric represent in QC?
+# Q2: Why do we filter cells with high percent.mt?
+
 #normalize and log transform
 pbmc <- NormalizeData(pbmc, normalization.method = "LogNormalize", scale.factor = 10000)
+
+# Q3: What is the purpose of NormalizeData in this workflow?
 
 #find highly variable genes
 
@@ -77,6 +82,8 @@ pbmc <- ScoreJackStraw(pbmc, dims = 1:20)
 
 JackStrawPlot(pbmc, dims = 1:15)
 
+# Q4: Which plot do we use to decide how many PCs to use?
+
 #We instead use something faster and simpler, called an elbow plot
 ElbowPlot(pbmc)
 
@@ -85,9 +92,12 @@ ElbowPlot(pbmc)
 pbmc <- FindNeighbors(pbmc, dims = 1:10)
 pbmc <- FindClusters(pbmc, resolution = 0.5)
 
+# Q5: What does FindClusters do?
 
 #UMAP for visaulization
 pbmc <- RunUMAP(pbmc, dims = 1:10)
+
+# Q6: What is the main goal of RunUMAP?
 
 #visualize clusters - the umap may change between runs, so don't worry about that
 DimPlot(pbmc, reduction = "umap")
@@ -107,3 +117,5 @@ new.cluster.ids <- c("Naive CD4 T", "Memory CD4 T", "CD14+ Mono", "B", "CD8 T", 
 names(new.cluster.ids) <- levels(pbmc)
 pbmc <- RenameIdents(pbmc, new.cluster.ids)
 DimPlot(pbmc, reduction = "umap", label = TRUE, pt.size = 0.5) + NoLegend()
+
+# Q7: How do you identify cell types in clusters?
