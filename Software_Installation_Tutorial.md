@@ -14,6 +14,7 @@
 1. [MATLAB 安装 / MATLAB Installation](#一matlab-安装--i-matlab-installation)
 2. [R 安装 / R Installation](#二r-安装--ii-r-installation)
 3. [Gurobi 求解器安装 / Gurobi Solver Installation](#三gurobi-求解器安装--iii-gurobi-solver-installation)
+4. [环境准备 / Environment Setup](#四环境准备--iv-environment-setup)
 
 ---
 
@@ -205,57 +206,43 @@
 
 ## 三、Gurobi 求解器安装 / III. Gurobi Solver Installation
 
-### 1. 软件申请 / License Application
+### 1. 安装 Gurobi / Installing Gurobi
 
-（1）学术许可申请指南：[许可申请 - 刃之砺信息科技](http://www.edgestone-it.com//NewsView1.Asp?id=4)
-（1）Academic license application guide: [License Application – Edgestone IT](http://www.edgestone-it.com//NewsView1.Asp?id=4)
+（1）双击 `Gurobi-10.0.1-win64.msi`，然后点击“Next”和“Accept”等按键。
+（1）Double-click `Gurobi-10.0.1-win64.msi`, then click buttons such as “Next” and “Accept”.
 
-（2）下载并填写申请表。
-（2）Download and complete the application form.
+（2）选择安装目录，注意安装目录不能出现中文和空格，最好直接使用默认目录。
+（2）Choose the installation directory. Note that the path must not contain Chinese characters or spaces; it is best to use the default directory directly.
 
-（3）准备教育部《学籍在线验证报告》。
-（3）Prepare the “Online Verification Report of Student Record” issued by the Ministry of Education.
+（3）依次点击“Next”、“Install”、“Finish”。最后的提示是否重启电脑选择“否”。
+（3）Click “Next”, “Install”, and “Finish” in sequence. When prompted whether to restart the computer at the end, select “No”.
 
-（4）将申请表和学籍在线报告通过邮件发送至 help@edgestone-it.com。
-（4）Email the application form and the verification report to help@edgestone-it.com.
+### 2. 激活 Gurobi / Activating Gurobi
 
-> **注**：材料审批一般需要 1–3 个工作日，收到的回复中包含激活码，有效期为一周，请注意及时安装 Gurobi。
->
-> **Note**: Review usually takes 1–3 working days. The reply contains an activation code valid for one week, so please install Gurobi promptly.
+（1）右键以管理员身份运行 `GurobiLicGen.exe`。
+（1）Right-click `GurobiLicGen.exe` and select “Run as administrator”.
 
-### 2. 软件下载 / Download
+（2）如果弹出“Windows 已保护你的电脑”的提示窗口，可以点击“更多信息”，再选择“仍要运行”。
+（2）If a “Windows protected your PC” pop-up appears, click “More info” and then select “Run anyway”.
 
-（1）下载链接：[The Leader in Decision Intelligence Technology - Gurobi Optimization](https://www.gurobi.com/)
-（1）Download page: [The Leader in Decision Intelligence Technology – Gurobi Optimization](https://www.gurobi.com/)
+（3）出现 `File Generated - Enjoy!!! Press Enter to exit...` 显示，则提示激活成功。
+（3）When `File Generated - Enjoy!!! Press Enter to exit...` is displayed, the activation is successful.
 
-（2）选择网站上方的“Downloads & Licenses”，点击“Download Center”。
-（2）Choose “Downloads & Licenses” in the top navigation, then click “Download Center”.
+（4）激活后生成的证书在 `[gurobi 安装位置]\win64\bin\gurobi.lic`，如 `C:\gurobi1001\win64\bin\gurobi.lic`。
+（4）The license file generated after activation is located at `[Gurobi installation directory]\win64\bin\gurobi.lic`, for example, `C:\gurobi1001\win64\bin\gurobi.lic`.
 
-（3）在“Download the Latest Version of Gurobi”中点击“Gurobi Optimizer”。
-（3）Under “Download the Latest Version of Gurobi”, click “Gurobi Optimizer”.
+---
 
-（4）根据自己的电脑选择合适的版本。
-（4）Choose the version that matches your computer.
+## 四、环境准备 / IV. Environment Setup
 
-### 3. 安装与激活 / Installation and Activation
+（1）解压 `Package` 中的三个工具包。
+（1）Extract the three toolboxes in `Package`.
 
-（1）双击下载好的安装程序，之后一直点击“Next”即可。
-（1）Double-click the downloaded installer and keep clicking “Next”.
+（2）打开 MATLAB，在“主页”选项卡中选择“设置路径”（Set Path），点击“添加并包含子文件夹”（Add with Subfolders），选择三个工具包的解压路径即可。
+（2）Open MATLAB, select “Set Path” in the “Home” tab, click “Add with Subfolders”, and select the extracted folders of the three toolboxes.
 
-（2）安装完成后，在计算机联网的情况下，输入 `cmd` 打开命令提示符窗口，使用 `cd` 命令进入 Gurobi 安装目录下的 `win64/bin` 目录，然后输入邮件中收到的激活码。
-（2）After installation, with the computer connected to the internet, open the Command Prompt (`cmd`) and use the `cd` command to enter the `win64/bin` folder of the Gurobi installation directory, then enter the activation code you received by email.
-
-（3）运行激活码后会生成许可文件 `gurobi.lic`，请按操作系统将其存放在以下目录：
-（3）Running the activation code produces the license file `gurobi.lic`. Place it in the following location for your operating system:
-
-| 操作系统 / OS | 存放位置 / License location |
-|---|---|
-| Windows | 把 `gurobi.lic` 放在 `c:\gurobi` 目录下 / Put `gurobi.lic` in `c:\gurobi` |
-| Linux | 把 `gurobi.lic` 放在 `/opt/gurobi` 目录下 / Put `gurobi.lic` in `/opt/gurobi` |
-| macOS | 把 `gurobi.lic` 放在 `/Library/gurobi` 目录下 / Put `gurobi.lic` in `/Library/gurobi` |
-
-如果没有这些目录，请自行创建。这是 Gurobi 默认的搜索位置。
-If the folder does not exist, create it. This is Gurobi's default search location.
+（3）此外，将 Gurobi 安装目录也使用相同的方法添加到 MATLAB 路径中。
+（3）In addition, add the Gurobi installation directory to the MATLAB path using the same method.
 
 ---
 
@@ -273,4 +260,4 @@ After installation, quickly verify that the environment works with the following
 
 ---
 
-*文档版本 / Version：v1.0　最后更新 / Last updated：2026-11-07*
+*文档版本 / Version：v1.1　最后更新 / Last updated：2026-11-09*
